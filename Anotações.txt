@@ -1,0 +1,6 @@
+10/11 Angular instalação  
+13/11 Angular 
+    {{}} = Interpolação
+
+24/11
+two way data bingind

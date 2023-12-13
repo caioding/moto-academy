@@ -1,0 +1,15 @@
+sudo apt install nodejs
+
+GIT
+git add .
+git commit -m "abalabalabalabalab"
+git push origin main
+
+ANGULAR
+ng serve
+ng generate component nome
+ng generate service nome
+
+LINUX
+
+ctrl h para ver ocultos
