@@ -13,3 +13,8 @@ ng generate service nome
 LINUX
 
 ctrl h para ver ocultos
+
+Node
+Criar um pasta node antes
+npm init
+npm install express
