@@ -53,4 +53,16 @@ app.delete("/users/:id", (req,res) => {
     res.sendStatus(204)
 })
 
+app.put('/users/:id', (req, res) => {
+    const id = parseInt(req.params.id)
+    const {name} = req.body
+    userIndex = users.findIndex(user => user.id === id);
+
+    if(userIndex !== -1) {
+        users[userIndex].name = name;
+        res.json(users[userIndex])
+    } else {
+        res.status(400).json({message: "Usuário não Encontrado"})        
+    }
+})
 app.listen(3000)
