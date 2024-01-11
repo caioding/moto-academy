@@ -1,1 +1,3 @@
 https://meet.google.com/hbm-xhwd-zaf?pli=1
+
+senha do mysql: root
