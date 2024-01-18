@@ -3,6 +3,7 @@
 const express = require('express');
 const router = express.Router()
 const db = require('./db');
+const validatorMiddleware = require('./middlewares/validatorMiddleware');
 
 // Endpoint de Leitura de Alunos (Read)
     router.get("/alunos", (req, res) => {
@@ -18,7 +19,7 @@ const db = require('./db');
     });
   
   // Endpoint de Criação de Aluno (Create)
-  router.post('/alunos', (req, res) => {
+  router.post('/alunos', validatorMiddleware.validateInput, (req, res) => {
     const { nome, idade } = req.body;
   
     const query = `INSERT INTO alunos (nome, idade) VALUES ('${nome}', ${idade})`;
