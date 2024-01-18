@@ -1,9 +1,10 @@
 class ValidatorMiddleware {
     validateInput(request, response, next) {
         const { nome, idade } = request.body;
-        if (typeof (nome) != 'string') {
-            return response.status(500).json({ description: "Nome contem tipo errado" })
-        }
+        if ((typeof (nome) != 'string') || typeof(idade) != 'number') {
+            return response.status(500).json({description: `Payload contem tipos errados: Parametro errado: ${typeof(nome) != 'string' ?"Nome" : "Idade"}`})
+        } else {}
+        next()
         console.log(request.body);
     }
 }
