@@ -1,5 +1,5 @@
-import { HomeService } from './../../../services/home-service/home.service';
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from '../../../services/home-service/home.service'
 
 @Component({
   selector: 'app-home-component',
@@ -7,9 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-component.component.scss']
 })
 export class HomeComponentComponent implements OnInit {
+  alunos = [];
+  constructor(private service : HomeService) {
 
-  constructor(private HomeService : HomeService) { }
+  }
 
   ngOnInit(): void {
-    this.service.get
+
+    this.service.getAlunos().subscribe((data) => {
+      this.alunos = data
+    })
   }
+
+  insertAlunos(){
+    console.log('AQUIIIIIIIIIII');
+
+    const data = {
+      nome : 'Lucas',
+      idade: 25
+    }
+    return this.service.insertAlunos(data).subscribe((data) => {
+      return  console.log(data)
+    })
+  }
+
+
+
+}

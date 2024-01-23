@@ -1,3 +1,15 @@
 https://meet.google.com/hbm-xhwd-zaf?pli=1
 
 senha do mysql: root
+
+npm init -y (index.js db.js)
+
+dependecias
+
+routes
+
+banco de dados 
+
+config banco 
+
+startar o index.js
