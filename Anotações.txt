@@ -13,3 +13,13 @@ banco de dados
 config banco 
 
 startar o index.js
+
+nickolas 
+luihza
+thiago
+carlos henrique 
+Caio
+
+PC:
+Lenovo Legion 5 15ACH6
+AMD® Ryzen 7 5800h with radeon graphics × 16
